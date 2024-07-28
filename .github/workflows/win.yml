@@ -12,3 +12,4 @@ jobs:
       - run: ./stdin32vcrt.exe
       - run: ./stdin64.exe
       - run: ./a.exe
+      - run: ./a64.exe
