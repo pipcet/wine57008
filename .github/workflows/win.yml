@@ -2,7 +2,7 @@ name: win
 on: [push]
 jobs:
   compile_and_run:
-    runs-on: windows-latest
+    runs-on: windows-2020
     steps:
       - uses: actions/checkout@v4
       - run: clang -m32 -o stdin32.exe stdin.c
