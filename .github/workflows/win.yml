@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: clang -m32 -o stdin32.exe stdin.c
-      - run: clang -D_DLL -lmsvcrt -m32 -o stdin32vcrt.exe stdin.c -fuse-ld=lld-link "-Wl,-nodefaultlib:libcmt"
+      - run: clang -D_DLL -lmsvcrt -m32 -o stdin32vcrt.exe stdin.c "-Wl,-nodefaultlib:libcmt"
       - run: clang -m64 -o stdin64.exe stdin.c
       - run: ./stdin32.exe
       - run: ./stdin32vcrt.exe
