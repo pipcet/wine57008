@@ -1,0 +1,11 @@
+name: win
+on: [push]
+jobs:
+  compile_and_run:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: clang -m32 -o stdin32.exe stdin.c
+      - run: clang -m64 -o stdin64.exe stdin.c
+      - run: ./stdin32.exe
+      - run: ./stdin64.exe
